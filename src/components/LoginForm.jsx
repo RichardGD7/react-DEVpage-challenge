@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -58,6 +58,9 @@ export default function LoginForm() {
           alt="dev_logo"
         />
       </div>
+      <h1 className="font-bold text-2xl flex justify-center p-2">
+        Join the DEV Community
+      </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <h3 className="font-semibold">Email</h3>
         <input
