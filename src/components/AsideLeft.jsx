@@ -4,7 +4,7 @@ export default function AsideLeft() {
       <ul>
         <li>
           <a
-            href=""
+            href="/"
             className="flex flex-row p-2 gap-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600"
           >
             <img

@@ -7,9 +7,12 @@ export default function NavBar() {
       <div className="flex flex-row justify-between items-center m-auto p-2 max-w-[1280px] ">
         <div className="flex flex-row gap-2">
           <img
-            className="max-h-[40px] pr-3"
+            className="max-h-[40px] pr-3 cursor-pointer"
             src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
             alt="dev-logo"
+            onClick={() => {
+              navigate("/");
+            }}
           />
           <input
             placeholder="Search..."

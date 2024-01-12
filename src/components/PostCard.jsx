@@ -5,7 +5,7 @@ export default function PostCard() {
 
   useEffect(() => {
     // fetch("https://devto-nodeproject-dev-sakq.4.us-1.fl0.io/posts")
-    fetch("http://localhost:3000")
+    fetch("http://localhost:5000/posts")
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);
