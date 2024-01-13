@@ -4,13 +4,11 @@ export default function PostCard() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // fetch("https://devto-nodeproject-dev-sakq.4.us-1.fl0.io/posts")
     fetch("http://localhost:5000/posts")
       .then((response) => response.json())
-      .then((data) => {
-        //console.log(data);
-        setPosts(data.data);
-        console.log(data.data);
+      .then((json) => {
+        setPosts(json.data);
+        console.log(json.data);
       });
   }, []);
 
@@ -21,7 +19,7 @@ export default function PostCard() {
           <article
             id="userCol"
             key={`post-${post._id}`}
-            className="my-3 drop-shadow"
+            className="py-3 drop-shadow"
           >
             <div
               id="userCard"
@@ -43,7 +41,7 @@ export default function PostCard() {
                       src={post.imgprofile}
                       alt=""
                       id="userImage"
-                      className="max-w-14 rounded-full"
+                      className="max-w-12 rounded-full"
                     />
                     <div id="dateTitle">
                       <h5
@@ -59,16 +57,21 @@ export default function PostCard() {
                   </div>
                 </div>
                 <div className="pl-[68px]">
-                  <p
-                    id="cardTitle"
-                    className="font-bold text-2xl hover:text-indigo-600 pb-3"
-                  >
-                    {post.title}
-                  </p>
+                  <a href={`/posts/${post._id}`}>
+                    <p
+                      id="cardTitle"
+                      className="font-bold text-2xl hover:text-indigo-600 pb-3"
+                    >
+                      {post.title}
+                    </p>
+                  </a>
                   <div id="divTags" className="flex gap-3 pb-1">
-                    {post.tags.map((tag) => {
+                    {post.tags.map((tag, index) => {
                       return (
-                        <span className="p-1 rounded-lg border border-white hover:border hover:border-indigo-600 hover:bg-indigo-200/50 hover:text-indigo-600">
+                        <span
+                          key={`tag-${post._id}-${index}`}
+                          className="p-1 rounded-lg border border-white hover:border hover:border-indigo-600 hover:bg-indigo-200/50 hover:text-indigo-600"
+                        >
                           #{tag}
                         </span>
                       );

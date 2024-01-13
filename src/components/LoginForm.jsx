@@ -25,7 +25,7 @@ export default function LoginForm() {
     event.preventDefault();
     setIsLoading(true);
 
-    fetch("http://localhost:3000/auth/login", {
+    fetch("http://localhost:3000/users/auth/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },

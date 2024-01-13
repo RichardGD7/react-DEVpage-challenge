@@ -1,6 +1,6 @@
 export default function AsideRight() {
   return (
-    <aside className="mt-4">
+    <aside className="pt-4">
       <div className="bg-white rounded-md p-5 mb-3 drop-shadow">
         <ul>
           <li>
@@ -54,7 +54,7 @@ export default function AsideRight() {
         </ul>
       </div>
 
-      <div className="bg-white rounded-md p-5">
+      <div className="bg-white rounded-md p-5 drop-shadow">
         <ul>
           <li>
             <p className="font-bold text-gray-700 text-xl hover:text-indigo-600">

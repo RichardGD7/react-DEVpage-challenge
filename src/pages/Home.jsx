@@ -7,12 +7,12 @@ import MainSection from "../components/MainSection";
 export default function Home() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 h-fit">
       <header className="fixed top-0 z-50 w-full">
         <NavBar />
       </header>
 
-      <div className="grid grid-cols-11 gap-5 m-auto p-2 max-w-[1280px] relative top-16">
+      <div className="grid grid-cols-11 gap-5 m-auto p-2 max-w-[1280px] relative pt-20">
         <section className="col-span-2">
           <AsideLeft />
         </section>
@@ -23,8 +23,6 @@ export default function Home() {
           <AsideRight />
         </section>
       </div>
-
-      <Outlet />
     </div>
   );
 }

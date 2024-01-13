@@ -195,47 +195,47 @@ export default function AsideLeft() {
           </a>
           <a href="https://dev.to/t/javascript">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              javascrip
+              #javascrip
             </li>
           </a>
           <a href="https://dev.to/t/beginners">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              beginners
+              #beginners
             </li>
           </a>
           <a href="https://dev.to/t/programming">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              programming
+              #programming
             </li>
           </a>
           <a href="https://dev.to/t/tutorial">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              tutorial
+              #tutorial
             </li>
           </a>
           <a href="https://dev.to/t/react">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              react
+              #react
             </li>
           </a>
           <a href="https://dev.to/t/python">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              python
+              #python
             </li>
           </a>
           <a href="https://dev.to/t/productivity">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              productivity
+              #productivity
             </li>
           </a>
           <a href="https://dev.to/t/devops">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              devops
+              #devops
             </li>
           </a>
           <a href="https://dev.to/t/aws">
             <li className="p-2 rounded-md hover:bg-purple-400/20 hover:text-purple-900 hover:underline text-gray-600">
-              aws
+              #aws
             </li>
           </a>
         </ul>
