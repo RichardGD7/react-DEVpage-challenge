@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function PostCard() {
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:5000/posts")
@@ -57,7 +59,12 @@ export default function PostCard() {
                   </div>
                 </div>
                 <div className="pl-[68px]">
-                  <a href={`/posts/${post._id}`}>
+                  <a
+                    // href={`/posts/${post._id}`}
+                    onClick={() => {
+                      navigate(`/posts/${post._id}`);
+                    }}
+                  >
                     <p
                       id="cardTitle"
                       className="font-bold text-2xl hover:text-indigo-600 pb-3"
