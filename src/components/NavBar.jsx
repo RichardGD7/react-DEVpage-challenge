@@ -58,7 +58,7 @@ export default function NavBar() {
               <img
                 src={`${imgProfileUser}`}
                 alt="profile-pic"
-                className="rounded-full max-h-[40px] object-none"
+                className="rounded-full max-h-[40px]"
               />
               <button
                 className="p-3 rounded-md hover:bg-red-100/50 hover:text-red-600 hover:underline text-gray-600 cursor-pointer"

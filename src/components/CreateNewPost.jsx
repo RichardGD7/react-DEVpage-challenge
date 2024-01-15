@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateNewPost() {
   const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -11,6 +14,8 @@ export default function CreateNewPost() {
   const nameUser = localStorage.getItem("nameUser");
 
   async function onPublish(data) {
+    const tagsArray = data.tags.split(",");
+    console.log(tagsArray);
     const response = await fetch("http://localhost:5000/api/posts", {
       method: "POST",
       body: JSON.stringify({
@@ -19,6 +24,9 @@ export default function CreateNewPost() {
         imgprofile: imgprofile,
         name: nameUser,
         title: data.title,
+        comments_count: "0",
+        date: "Ene 15",
+        tags: tagsArray,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -28,6 +36,7 @@ export default function CreateNewPost() {
 
     const responseData = await response.json();
     console.log(responseData);
+    navigate("/");
   }
 
   return (
@@ -71,7 +80,9 @@ export default function CreateNewPost() {
 
               <input
                 placeholder={`${
-                  errors.tags ? "Tags required" : "Add up to 4 tags..."
+                  errors.tags
+                    ? "Tags required"
+                    : "Add up to 4 tags (separated by commas)..."
                 }`}
                 className={`rounded-md p-1 w-full text-md placeholder:text-gray-600 ${
                   errors.tags
