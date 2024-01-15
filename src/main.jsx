@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Post from "./pages/Post";
+import NewUser from "./pages/NewUser";
+import CreateAccount from "./pages/CreateAccount";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
   {
     path: "/posts/:id",
     element: <Post />,
+  },
+  {
+    path: "/new-user",
+    element: <NewUser />,
+  },
+  {
+    path: "/new-user/form",
+    element: <CreateAccount />,
   },
 ]);
 

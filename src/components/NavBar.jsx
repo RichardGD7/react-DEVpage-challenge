@@ -36,7 +36,7 @@ export default function NavBar() {
           <button
             className="p-3 rounded-md border border-indigo-600 hover:bg-indigo-600 hover:text-white hover:underline text-indigo-600 font-semibold cursor-pointer"
             onClick={() => {
-              navigate("/login");
+              navigate("/new-user");
             }}
           >
             Create account
