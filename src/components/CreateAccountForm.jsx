@@ -25,6 +25,7 @@ export default function CreateAccountForm() {
         username: data.username,
         email: data.email,
         password: data.password,
+        imgprofile: data.imgprofile,
       }),
       headers: { "Content-Type": "application/json" },
     });
