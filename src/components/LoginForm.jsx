@@ -25,7 +25,7 @@ export default function LoginForm() {
     event.preventDefault();
     setIsLoading(true);
 
-    fetch("http://localhost:3000/users/auth/login", {
+    fetch("http://localhost:5000/users/auth/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
@@ -34,9 +34,11 @@ export default function LoginForm() {
       .then((data) => {
         if (data?.token) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("imgProfileUser", data?.imgprofile);
+          localStorage.setItem("username", data?.username);
           setIsLoading(false);
           setIsFailed(false);
-          navigate("/Home"); //Pendiente cambiar a Home
+          navigate("/"); //Pendiente cambiar a Home
         } else {
           setIsLoading(false);
           setIsFailed(true);

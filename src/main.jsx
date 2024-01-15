@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Post from "./pages/Post";
 import NewUser from "./pages/NewUser";
 import CreateAccount from "./pages/CreateAccount";
+import NewPost from "./pages/NewPost";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/new-user/form",
     element: <CreateAccount />,
+  },
+  {
+    path: "/new-post",
+    element: <NewPost />,
   },
 ]);
 

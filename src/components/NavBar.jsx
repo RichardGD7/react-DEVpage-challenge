@@ -15,6 +15,13 @@ export default function NavBar() {
     }
   }, []);
 
+  function signOut() {
+    setIsLogged(false);
+    localStorage.removeItem("token");
+    localStorage.removeItem("imgProfileUser");
+    localStorage.removeItem("username");
+  }
+
   return (
     <nav className=" bg-white drop-shadow ">
       <div className="flex flex-row justify-between items-center m-auto p-2 max-w-[1280px] ">
@@ -43,7 +50,7 @@ export default function NavBar() {
               <button
                 className="p-3 rounded-md border border-indigo-600 hover:bg-indigo-600 hover:text-white hover:underline text-indigo-600 font-semibold cursor-pointer"
                 onClick={() => {
-                  navigate("/new-user");
+                  navigate("/new-post");
                 }}
               >
                 Create Post
@@ -56,7 +63,8 @@ export default function NavBar() {
               <button
                 className="p-3 rounded-md hover:bg-red-100/50 hover:text-red-600 hover:underline text-gray-600 cursor-pointer"
                 onClick={() => {
-                  navigate("/login");
+                  signOut();
+                  navigate("/");
                 }}
               >
                 Sign out
