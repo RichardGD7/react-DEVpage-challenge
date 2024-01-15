@@ -35,10 +35,11 @@ export default function LoginForm() {
         if (data?.token) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("imgProfileUser", data?.imgprofile);
-          localStorage.setItem("username", data?.username);
+          // localStorage.setItem("username", data?.username);
+          localStorage.setItem("nameUser", data?.name);
           setIsLoading(false);
           setIsFailed(false);
-          navigate("/"); //Pendiente cambiar a Home
+          navigate("/");
         } else {
           setIsLoading(false);
           setIsFailed(true);

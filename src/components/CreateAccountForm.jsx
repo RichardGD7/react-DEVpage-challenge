@@ -36,7 +36,7 @@ export default function CreateAccountForm() {
     } else if (responseData?.data?._id) {
       localStorage.setItem("token", responseData?.data?._id);
       localStorage.setItem("imgProfileUser", responseData?.data?.imgprofile);
-      localStorage.setItem("username", responseData?.data?.username);
+      localStorage.setItem("nameUser", responseData?.data?.name);
       navigate("/");
     } else {
       setError("root", { message: "Invalid data, change it and try again" });
