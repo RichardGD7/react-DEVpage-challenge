@@ -59,7 +59,9 @@ export default function NewUser() {
         <li>
           <a
             className="flex flex-row justify-center items-center p-3 gap-2 rounded-md border  hover:bg-gray-100  font-semibold"
-            href="/new-user/form"
+            onClick={() => {
+              navigate("/new-user/form");
+            }}
           >
             <img src="envelope.png" alt="email-logo" className="max-w-7" />
             Sign up with Email
