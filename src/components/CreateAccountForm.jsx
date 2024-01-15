@@ -34,6 +34,8 @@ export default function CreateAccountForm() {
       setError("root", { message: "Invalid data, change it and try again" });
     } else if (responseData?.data?._id) {
       localStorage.setItem("token", responseData?.data?._id);
+      localStorage.setItem("imgProfileUser", responseData?.data?.imgprofile);
+      localStorage.setItem("username", responseData?.data?.username);
       navigate("/");
     } else {
       setError("root", { message: "Invalid data, change it and try again" });
@@ -48,7 +50,6 @@ export default function CreateAccountForm() {
         <input
           className="border border-gray-400 rounded-md p-1 w-full"
           type="text"
-          // placeholder={errors.name ? errors.name?.message : ""}
           {...register("name", {
             required: { value: true, message: "Name required" },
           })}
@@ -66,6 +67,15 @@ export default function CreateAccountForm() {
         {errors.username && (
           <p className="text-red-500">{errors.username?.message}</p>
         )}
+
+        <h2 className="font-semibold text-md pt-3">Profile image link *</h2>
+        <input
+          className="border border-gray-400 rounded-md p-1 w-full"
+          type="text"
+          {...register("imgprofile", {
+            required: { value: true, message: "Link required" },
+          })}
+        />
 
         <h2 className="font-semibold text-md pt-3">Email *</h2>
         <input
